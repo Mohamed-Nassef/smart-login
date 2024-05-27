@@ -1,0 +1,87 @@
+/*----------------------------------------------
+    Description: ......
+    Author: Mohamed Nassef Yousse 
+    Email : mohamadnassef419@gmail.com
+    Number : +201096330173
+
+    sorce site : ...
+----------------------------------------*/
+
+/* ------------------------------------
+                global css 
+--------------------------------------- */
+:root {
+  --mainColor: #212529;
+  --p_Color: #fff;
+  /* ========= padding for scroll equall nave hight ==== */
+  scroll-padding: 100px;
+}
+html {
+  /* ============== scroll smooth ============= */
+  scroll-behavior: smooth;
+}
+body {
+  background: #24353f;
+  color: var(--mainColor);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  color: #17a2b8;
+}
+a {
+  color: inherit;
+  background-color: transparent;
+}
+span {
+  display: inline-block;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+  border: 0px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  color: var(--p_Color);
+  line-height: 1.6;
+  font-size: 15px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none !important;
+  outline: none !important;
+}
+/* ==== fixed pading for all sections ====  */
+.sec-padding {
+  padding: 120px 0px;
+}
+.group {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.signLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+.signLink:hover {
+  text-decoration: underline;
+}
+.form-control {
+  background-color: #88a8ba;
+  color: #fff !important;
+}
+.form-control:focus {
+  background-color: #88a8ba;
+}

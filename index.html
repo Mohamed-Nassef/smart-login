@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login System</title>
+    <!-- Fonts Links (Montserrat,Poppins)-->
+
+    <!-- CSS Links  (bootstrap,fontawsome 6)-->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- fontawsome 4 for old icons-->
+    <link rel="stylesheet" href="./CSS/font-awesome.min.css" />
+  </head>
+  <body>
+    <section id="signInSection" class="signIn-sec d-none">
+      <div class="container my-5 text-center sec-padding">
+        <div class="group m-auto w-75 p-5">
+          <h1>Smart Login System</h1>
+          <input
+            id="signinEmail"
+            class="form-control my-3"
+            placeholder="Enter your email"
+            type="text"
+          />
+          <div class="alert alert-danger p-1 my-2 d-none">Email not exits</div>
+          <input
+            id="signinPassword"
+            class="form-control my-3"
+            placeholder="Enter your password"
+            type="password"
+          />
+          <div class="alert alert-danger p-1 my-2 d-none">
+            password not correct
+          </div>
+          <p id="incorrect"></p>
+
+          <button onclick="login()" class="btn btn-outline-info w-100 my-3">
+            Login
+          </button>
+          <p class="text-white">
+            Don’t have an account?
+            <a class="text-white signLink" onclick="switchPage2()">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="signUpSection" class="signUp-sec">
+      <div class="container my-5 text-center sec-padding">
+        <div class="group m-auto w-75 p-5">
+          <h1>Smart Login System</h1>
+          <input
+            oninput="validateInpute(this)"
+            id="signupName"
+            class="form-control my-3"
+            placeholder="Enter your name"
+            type="text"
+          />
+          <div class="alert alert-danger p-1 my-2 d-none">
+            Name should be start with char and min 4 char after
+          </div>
+          <input
+            oninput="validateInpute(this)"
+            id="signupEmail"
+            class="form-control my-3"
+            placeholder="Enter your email"
+            type="email"
+          />
+          <div class="alert alert-danger p-1 my-2 d-none">Not valid Email</div>
+          <input
+            oninput="validateInpute(this)"
+            id="signupPassword"
+            class="form-control my-3"
+            placeholder="Enter  password"
+            type="password"
+          />
+          <div class="alert alert-danger p-1 my-2 d-none">
+            password shpuld be have at lest one char and min 8 char total
+          </div>
+          <div id="succ" class="text-success d-none">
+            your account was successfully created
+          </div>
+          <button onclick=" signUp()" class="btn btn-outline-info w-100 my-3">
+            Sign Up
+          </button>
+          <p class="text-white">
+            You have an account?
+            <a class="text-white signLink" onclick="switchPage()">Signin</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="welcomeSection" class="welcome-sec d-none">
+      <nav class="navbar navbar-expand-lg navbar-dark group">
+        <div class="container">
+          <a class="navbar-brand" href="#">SMART LOGIN</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link btn btn-outline-warning" onclick="logout()"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="container my-5 text-center h-100 d-flex align-items-center sec-padding"
+      >
+        <div class="group m-auto w-75 p-5">
+          <h1 id="username">Welcome Mohamed</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Js file (bootstrap)-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- my js -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
