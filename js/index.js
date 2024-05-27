@@ -87,7 +87,7 @@ function login() {
     ) {
       signInSection.classList.add("d-none");
       welcomeSection.classList.remove("d-none");
-      userName.innerHTML = "welcome " + usersList[i].name;
+      userName.innerHTML = "Welcome " + usersList[i].name;
       clearInput();
       cheak = true;
     }
@@ -141,7 +141,7 @@ function login() {
   //           "d-block",
   //           "d-none"
   //         );
-  //       }, 3000);git 
+  //       }, 3000);git
   //     }
   //   } else {
   //     signInSection.classList.add("d-none");
